@@ -1,6 +1,6 @@
 # SimDCL
 This is our PyTorch implementation code for our paper:
-> [1] SimDCL: dropout-based simple graph contrastive learning for recommendation
+> [1] Xu Yuhao, Wang Zhenhai, Wang ZhiRu, Guo YunLong, Fan Rong, Tian Hongyu and Wang Xing . “SimDCL: dropout-based simple graph contrastive learning for recommendation.” Complex & Intelligent Systems (2023)
 
 # Requirements
 
