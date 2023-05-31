@@ -1,0 +1,108 @@
+## ml-1m
+## dataset config
+#field_separator: "\t"
+#seq_separator: " "
+#USER_ID_FIELD: user_id
+#ITEM_ID_FIELD: item_id
+#RATING_FIELD: rating
+#NEG_PREFIX: neg_
+#LABEL_FIELD: label
+#load_col:
+#    inter: [user_id, item_id, rating]
+#val_interval:
+#    rating: "[3,inf)"
+#unused_col:
+#    inter: [rating]
+#
+## training and evaluation
+#epochs: 500
+#train_batch_size: 4096
+#valid_metric: MRR@10
+#eval_batch_size: 4096000
+#
+#embedding_size: 64
+#
+#learning_rate: 0.001
+#topk: [10, 20, 50]
+
+# yelp
+# dataset config
+#field_separator: "\t"
+#seq_separator: " "
+#USER_ID_FIELD: user_id
+#NEG_PREFIX: neg_
+#LABEL_FIELD: label
+#load_col:
+#  inter: [user_id, business_id, stars]
+#ITEM_ID_FIELD: business_id
+#RATING_FIELD: stars
+#
+#val_interval:
+#  stars: "[3,inf)"
+#user_inter_num_interval: "[15,inf)"
+#item_inter_num_interval: "[15,inf)"
+#
+## training and evaluation
+#epochs: 500
+#train_batch_size: 4096
+#valid_metric: MRR@10
+#eval_batch_size: 4096000
+#
+#embedding_size: 64
+#
+#learning_rate: 0.001
+#topk: [10, 20, 50]
+
+# amazon book
+# dataset config
+#field_separator: "\t"
+#seq_separator: " "
+#USER_ID_FIELD: user_id
+#ITEM_ID_FIELD: item_id
+#RATING_FIELD: rating
+#NEG_PREFIX: neg_
+#LABEL_FIELD: label
+#load_col:
+#    inter: [user_id, item_id, rating]
+#val_interval:
+#    rating: "[3,inf)"
+#unused_col:
+#    inter: [rating]
+#
+#user_inter_num_interval: "[20,inf)"
+#item_inter_num_interval: "[20,inf)"
+#
+## training and evaluation
+#epochs: 500
+#train_batch_size: 4096
+#valid_metric: MRR@10
+#eval_batch_size: 4096000
+#
+#embedding_size: 64
+#
+#learning_rate: 0.001
+#topk: [10, 20, 50]
+
+# gowalla-d
+field_separator: "\t"
+seq_separator: " "
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+NEG_PREFIX: neg_
+LABEL_FIELD: label
+load_col:
+    inter: [user_id, item_id]
+
+user_inter_num_interval: "[15,inf)"
+item_inter_num_interval: "[15,inf)"
+
+# training and evaluation
+epochs: 500
+train_batch_size: 4096
+valid_metric: MRR@10
+eval_batch_size: 4096000
+
+embedding_size: 64
+
+learning_rate: 0.001
+topk: [10, 20, 50]

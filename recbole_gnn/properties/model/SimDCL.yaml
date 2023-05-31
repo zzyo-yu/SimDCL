@@ -1,0 +1,227 @@
+# ml-1m
+n_layers: 3
+ssl_tau: 0.15
+reg_weight: 5e-4
+ssl_weight: 0.05  # best 0.04
+
+dropout: 0.2
+noise_dropout: 0.2
+exponent: 1
+num_gradual: 40
+
+drop_start: 0.1
+drop_end: 0.2
+embedding_size: 64
+learning_rate: 0.002
+
+gamma: 4
+
+field_separator: "\t"
+seq_separator: " "
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+RATING_FIELD: rating
+NEG_PREFIX: neg_
+LABEL_FIELD: label
+load_col:
+ inter: [user_id, item_id, rating]
+val_interval:
+ rating: "[3,inf)"
+unused_col:
+ inter: [rating]
+
+epochs: 500
+train_batch_size: 4096
+valid_metric: MRR@10
+eval_batch_size: 4096000
+
+topk: [10, 20, 50]
+
+# amazon
+# user_inter_num_interval: "[15,inf)"
+# item_inter_num_interval: "[15,inf)"
+#
+
+# type: "ED"
+
+# field_separator: "\t"
+# seq_separator: " "
+# USER_ID_FIELD: user_id
+
+# NEG_PREFIX: neg_
+# LABEL_FIELD: label
+
+# epochs: 500
+# train_batch_size: 4096
+# valid_metric: MRR@10
+# eval_batch_size: 4096000
+
+# topk: [10, 20, 50]
+# n_layers: 3
+# ssl_tau: 0.125
+# reg_weight: 5e-5
+# ssl_weight: 0.005
+# dropout: 0.1
+# embedding_size: 64
+# learning_rate: 0.005
+
+# load_col:
+#   inter: [user_id, business_id, stars]
+# ITEM_ID_FIELD: business_id
+# RATING_FIELD: stars
+
+# val_interval:
+#   stars: "[3,inf)"
+
+# user_inter_num_interval: "[25,inf)"
+# item_inter_num_interval: "[25,inf)"
+
+# yelp
+# field_separator: "\t"
+# seq_separator: " "
+# USER_ID_FIELD: user_id
+# NEG_PREFIX: neg_
+# LABEL_FIELD: label
+# load_col:
+#   inter: [user_id, business_id, stars]
+# ITEM_ID_FIELD: business_id
+# RATING_FIELD: stars
+# val_interval:
+#   stars: "[3,inf)"
+
+# yelp2018
+# load_col:
+#   inter: [user_id, item_id, rating]
+# ITEM_ID_FIELD: item_id
+# RATING_FIELD: rating
+# val_interval:
+#   rating: "[3,inf)"
+
+# user_inter_num_interval: "[15,inf)"
+# item_inter_num_interval: "[15,inf)"
+
+# epochs: 500
+# train_batch_size: 4096
+# valid_metric: MRR@10
+# eval_batch_size: 4096000
+
+# topk: [10, 20, 50]
+
+# n_layers: 3
+# ssl_tau: 0.15
+# reg_weight: 1e-10
+# ssl_weight: 0.01
+# dropout: 0.1.txt
+# embedding_size: 64
+# learning_rate: 0.004
+
+
+# gowalla
+# dataset config
+# field_separator: "\t"
+# seq_separator: " "
+# USER_ID_FIELD: user_id
+# ITEM_ID_FIELD: item_id
+# RATING_FIELD: rating
+# NEG_PREFIX: neg_
+# LABEL_FIELD: label
+# load_col:
+#    inter: [user_id, item_id]
+
+# training and evaluation
+# epochs: 500
+# train_batch_size: 4096
+# valid_metric: MRR@10
+# eval_batch_size: 4096000
+
+# embedding_size: 64
+
+# # learning_rate: 0.002
+# # n_layers: 3
+# # reg_weight: 0.0001
+# # ssl_tau: 0.05
+# # dropout: 0.2
+# # ssl_weight: 0.005
+
+# learning_rate: 0.002
+# n_layers: 3
+# reg_weight: 5e-4
+# ssl_tau: 0.15
+# dropout: 0.1
+# ssl_weight: 0.5
+
+# exponent: 1
+# num_gradual: 5
+
+# drop_start: 0.15
+# drop_end: 0.2
+
+# user_inter_num_interval: "[10,inf)"
+# item_inter_num_interval: "[10,inf)"
+# topk: [10, 20, 50]
+
+# amazon books
+# epochs: 500
+# train_batch_size: 4096
+# valid_metric: MRR@10
+# eval_batch_size: 4096000
+
+
+# n_layers: 2
+# ssl_tau: 0.2
+# reg_weight: 5e-5
+# ssl_weight: 0.1
+# dropout: 0.05
+# embedding_size: 64
+# learning_rate: 0.002
+
+# load_col:
+#    inter: [user_id, item_id, rating]
+# val_interval:
+#    rating: "[3,inf)"
+# unused_col:
+#    inter: [rating]
+
+
+# topk: [10, 20, 50]
+
+# user_inter_num_interval: "[20,inf)"
+# item_inter_num_interval: "[20,inf)"
+
+# ta-feng
+# field_separator: "\t"
+# seq_separator: " "
+
+# NEG_PREFIX: neg_
+# LABEL_FIELD: label
+
+# load_col:
+#   inter: [customer_id, product_id]
+# USER_ID_FIELD: customer_id
+# ITEM_ID_FIELD: product_id
+
+# user_inter_num_interval: "[5,inf)"
+# item_inter_num_interval: "[5,inf)"
+
+# epochs: 500
+# train_batch_size: 4096
+# valid_metric: MRR@10
+# eval_batch_size: 4096000
+
+# topk: [10, 20, 50]
+
+# n_layers: 3
+# ssl_tau: 0.175
+# reg_weight: 5e-5
+# ssl_weight: 0.175
+# dropout: 0.3
+# noise_dropout: 0.3
+# embedding_size: 64
+# learning_rate: 0.002
+# gamma: 4
+
+# exponent: 1
+# num_gradual: 5
+
+# drop_start: 0.15
+# drop_end: 0.25

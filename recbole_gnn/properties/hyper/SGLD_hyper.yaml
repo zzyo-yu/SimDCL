@@ -1,0 +1,29 @@
+type: "ED"
+n_layers: 3
+ssl_tau: 0.2
+reg_weight: 5e-1
+ssl_weight: 0.01
+# dropout: 0.25.txt
+embedding_size: 64
+learning_rate: 0.002
+
+field_separator: "\t"
+seq_separator: " "
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+RATING_FIELD: rating
+NEG_PREFIX: neg_
+LABEL_FIELD: label
+load_col:
+    inter: [user_id, item_id, rating]
+val_interval:
+    rating: "[3,inf)"
+unused_col:
+    inter: [rating]
+
+epochs: 500
+train_batch_size: 4096
+valid_metric: MRR@10
+eval_batch_size: 4096000
+
+topk: [10, 20, 50]
