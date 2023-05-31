@@ -5,8 +5,11 @@ This is our PyTorch implementation code for our paper:
 # Requirements
 
 > recbole==1.1.1
+> 
 > pyg>=2.0.4
+> 
 > pytorch>=1.7.0
+> 
 > python>=3.7.0
 
 # Quick-Start
